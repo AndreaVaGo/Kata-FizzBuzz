@@ -21,4 +21,11 @@ public class FizzBuzzTest {
         assertEquals("Buzz", resultado);
     }
 
+    @Test
+    public void shouldReturnFizzBuzz() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+    String resultado = fizzBuzz.convert(15);
+    assertEquals("FizzBuzz", resultado);
+}
+
 }
