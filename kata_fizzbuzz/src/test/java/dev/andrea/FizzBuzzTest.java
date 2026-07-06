@@ -21,11 +21,20 @@ public class FizzBuzzTest {
         assertEquals("Buzz", resultado);
     }
 
+    // Test que comprueba que cuando el número es divisible por 3 y por 5, se devuelve "FizzBuzz"
     @Test
     public void shouldReturnFizzBuzz() {
-    FizzBuzz fizzBuzz = new FizzBuzz();
-    String resultado = fizzBuzz.convert(15);
-    assertEquals("FizzBuzz", resultado);
-}
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String resultado = fizzBuzz.convert(15);
+        assertEquals("FizzBuzz", resultado);
+    }
+
+    // Test que comprueba que cuando el número no es divisible ni por 3 ni por 5, se devuelve el propio número
+    @Test
+    public void shouldReturnTheNumber() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String resultado = fizzBuzz.convert(7);
+        assertEquals("7", resultado);
+    }
 
 }
