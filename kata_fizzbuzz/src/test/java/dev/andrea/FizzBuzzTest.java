@@ -5,7 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {
 
-    // Test que comprueba que cuando el número es divisible por 3, se devuelve "Fizz"
+    // Test que comprueba que cuando el número es divisible por 3, se devuelve
+    // "Fizz"
     @Test
     public void shouldReturnFizz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
@@ -13,7 +14,8 @@ public class FizzBuzzTest {
         assertEquals("Fizz", resultado);
     }
 
-    // Test que comprueba que cuando el número es divisible por 5, se devuelve "Buzz"
+    // Test que comprueba que cuando el número es divisible por 5, se devuelve
+    // "Buzz"
     @Test
     public void shouldReturnBuzz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
@@ -21,7 +23,8 @@ public class FizzBuzzTest {
         assertEquals("Buzz", resultado);
     }
 
-    // Test que comprueba que cuando el número es divisible por 3 y por 5, se devuelve "FizzBuzz"
+    // Test que comprueba que cuando el número es divisible por 3 y por 5, se
+    // devuelve "FizzBuzz"
     @Test
     public void shouldReturnFizzBuzz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
@@ -29,12 +32,27 @@ public class FizzBuzzTest {
         assertEquals("FizzBuzz", resultado);
     }
 
-    // Test que comprueba que cuando el número no es divisible ni por 3 ni por 5, se devuelve el propio número
+    // Test que comprueba que cuando el número no es divisible ni por 3 ni por 5, se
+    // devuelve el propio número
     @Test
     public void shouldReturnTheNumber() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         String resultado = fizzBuzz.convert(7);
         assertEquals("7", resultado);
+    }
+
+    @Test
+    public void shouldReturnFizzWhenNumberContainsThree() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String resultado = fizzBuzz.convert(13);
+        assertEquals("Fizz", resultado);
+    }
+
+    @Test
+    public void shouldReturnBuzzWhenNumberContainsFive() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String resultado = fizzBuzz.convert(52);
+        assertEquals("Buzz", resultado);
     }
 
 }
